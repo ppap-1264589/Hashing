@@ -1,9 +1,12 @@
-### FINDSTRING.cpp
+### [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
+
+### [Bài Toán](https://github.com/ppap-1264589/Hashing/files/6961866/A-Hash.pdf)
+
+### [Lời giải]
+
+### Code : FINDSTRING.cpp
 ```c++
 #include <bits/stdc++.h>
-#pragma GCC optimize("Ofast")
-#pragma GCC optimize ("unroll-loops")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 
 #define Task                    "A"
 #define ll                      long long
@@ -18,11 +21,6 @@
 #define s                       second
 using namespace std;
 
-void setFile(){
-    freopen (Task".inp", "r", stdin);
-    freopen (Task".out", "w", stdout);
-}
-
 const int maxn = 10000001;
 const long long MM = 1ll*MOD*MOD;
 
@@ -36,7 +34,6 @@ long long gethash(int u, int v){
 }
 
 signed main (){
-    setFile();
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
