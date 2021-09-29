@@ -20,6 +20,7 @@
     <summary>Code</summary>
     
 ```c++
+    
 #include <bits/stdc++.h>
 #define Task ""
 #define up(i,a,b)               for (int i = (a); i <= (b); i++)
@@ -70,5 +71,6 @@ signed main (){
     }
     return 0;
 }
+                         
 ```
 </details>
