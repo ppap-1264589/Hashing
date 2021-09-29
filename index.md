@@ -173,11 +173,11 @@ Sẽ có hai trường hợp xảy ra
 
 - TH1: (n - k + 1) % 2 == 0
 
-Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
+    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
 
 - TH2: (n - k + 1) % 2 == 1
 
-Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
+    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
     
 Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
     
