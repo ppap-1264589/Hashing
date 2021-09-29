@@ -261,20 +261,13 @@ signed main (){
 ```
 </details>
 
-
-    
-    
-    
-    
-    
-
+-----------------------------------------
 <div id='id-sectionC'/>
 
 ### C. Bắt đầu và kết thúc
     
 <details>
 <summary>Đề bài</summary>
-    
 
 Cho một dãy số nguyên gồm n phần tử, đã bị xáo trộn vị trí theo một quy tắc như sau:
     
