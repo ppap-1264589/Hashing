@@ -111,7 +111,7 @@ Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' 
 Ghi kết quả : 
 ```c++    
 result[thu tu cua xau A[i]] = thu tu cua xau B[i]    
-for (i từ 1 -> m) cout << result[i] << " ";
+for (i : 1 -> m) cout << result[i] << " ";
 ```
 
 #### [Code](https://ideone.com/od38MB)
@@ -150,14 +150,14 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
     
 **Example**
     
-*input*
+*Input*
 ```c++
 5
 1 2 3 1 2
 3 1 2 2 1
 ```
     
-*output*
+*Output*
 ```c++
 1
 3
@@ -186,3 +186,87 @@ Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
 Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
         
 #### [Code](https://ideone.com/XvOmUc)
+
+
+-----------
+
+### D. ADN
+Một trong những nhiệm vụ của phân tích gen di truyền là so sánh độ giống nhau của 2 chuỗi ADN.
+
+Chuỗi ADN đó là xâu chỉ chứa các ký tự từ tập {A, G, C, T}. Khi so sánh người ta có thể đẩy vòng tròn các ký tự trong chuỗi ADN. 
+
+Mục tiêu của so sánh là tìm đoạn ADN dài nhất giống nhau ở 2 xâu bao gồm các ký tự liên tiếp.
+Độ dài đoạn giống nhau này được gọi là độ giống nhau của 2 chuỗi.
+
+Yêu cầu: Cho 2 chuỗi ADN có độ dài giống nhau và không vượt quá 50 000. Hãy xác định độ giống
+nhau của 2 chuỗi.
+
+**Input**
+
+Gồm 2 dòng, mỗi dòng chứa một chuỗi ADN.
+
+**Output**
+
+Một số nguyên – độ giống nhau của 2 chuỗi
+
+**Example**
+
+*Input*
+```c++
+ACAGTG
+AGTGTC
+```
+
+*Output*
+```c++
+5
+```
+
+*Note*
+
+Giải thích: 2 xâu sau đẩy vòng là ACAGTG và TCAGTG
+
+#### Hướng dẫn
+
+Nhận thấy xâu cho trước có thể đẩy vòng tròn, nên ta quy xâu cho trước về dạng gấp đôi: a = a + a và b = b + b
+
+Sử dụng kĩ thuật tìm kiếm nhị phân:
+
+- Quy về bài toán tìm result sao cho result là xâu con liên tiếp chung dài nhất của cả hai xâu
+- xét k và xét 1 xâu độ dài (res + 1 << k) có thỏa mãn hay không ?
+- Nếu (res + 1 << k) là một xâu thỏa mãn kết quả : result += (1 << k)
+- Lần lượt tìm đến k-1, k-2... 0
+
+Nhận xét: do tính chất 'chung' của hai xâu **giảm dần** khi 'độ dài tìm được' **tăng lên**
+-> Bài toán có tính đơn điệu hàm số -> Tìm kiếm nhị phân
+
+Sử dụng map để đánh dấu mã Hash nào đã xuất hiện ở xâu A
+
+Xét xâu B, nếu mã Hash đã xuất hiện ở A, chứng tỏ kết quả res + (1 << k) thỏa mãn
+
+
+# Warning
+
+Nếu ta chỉ dùng 1 MOD, thì chúng ta sẽ không Accepted được bài toán (đúng khoảng 30% số test)
+
+Tại sao ?
+
+Trước tiên chúng ta cần phải quay về bài toán ngày sinh nhật: 
+>! Trong một phòng có 75 người, xác suất để hai người có cùng ngày sinh xấp xỉ 100% (?!)
+
+Phân tích: giả sử tất cả mọi người trong phòng đều có ngày sinh khác nhau đôi một
+
+Nếu người thứ nhất sinh vào một ngày nào đó trong năm, thì người thứ 2 không thể sinh vào ngày đó
+
+-> Xác suất để 2 người khác ngày sinh: (1 * (1 - 1/365)) * 100% 
+
+-> Xác suất để 3 người khác ngày sinh: (1 * (1 - 1/365) * (1 - 2/365)) * 100%
+...
+
+Tương tự: xác suất để 75 người đều khác ngày sinh : ~ 0.1%
+
+Trở về với bài toán, ta thấy rằng xác suất để có được hai mã Hash khác nhau trong 10^5 số từ 0->10^9, sẽ là một tỉ lệ rất nhỏ (tính toán cho thấy giá trị này đạt khoảng 18%) -> hiệu quả của thuật toán Hash không cao !
+
+-> Nên dùng nhiều base hoặc nhiều MOD để giảm xác xuất Collision
+
+#### [Code](https://ideone.com/ZE3GT0)
