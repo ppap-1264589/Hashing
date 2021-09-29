@@ -242,7 +242,7 @@ Nhận xét: do tính chất 'chung' của hai xâu **giảm dần** khi 'độ 
 
 Sử dụng map để đánh dấu mã Hash nào đã xuất hiện ở xâu A
 
-Xét xâu B, nếu mã Hash đã xuất hiện ở A, chứng tỏ kết quả res + (1 << k) thỏa mãn
+-> Xét xâu B, nếu mã Hash đã xuất hiện ở A, chứng tỏ kết quả res + (1 << k) thỏa mãn
 
 
 # Warning
