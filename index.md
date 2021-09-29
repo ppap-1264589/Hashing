@@ -97,9 +97,7 @@ toi
 
 #### Hướng dẫn
 
-Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A,
-    
-và của tất cả các xâu trong tập hợp cho trước vào tập B
+Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A, và của tất cả các xâu trong tập hợp cho trước vào tập B
     
 Ta lưu lại hai tham số cho mỗi tập
     
@@ -113,10 +111,10 @@ Sort lại hai tập theo giá trị của mã Hash.
 Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' lớn hơn luôn được đẩy lên trước
     
 Ghi kết quả : 
-    
-result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
-    
+```c++    
+result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]    
 for (i từ 1 -> m) cout << result[i] << " ";
+```
 
 #### [Code](https://ideone.com/od38MB)
 
@@ -134,13 +132,9 @@ Cho một dãy số nguyên gồm n phần tử, đã bị xáo trộn vị trí
     
 • Đảo ngược vị trí của dãy k số kết thúc bởi số cuối cùng ở bên phải.
     
-Ví dụ, với k = 3 và trình tự ban đầu các số là [1, 2, 3, 1, 2], sau khi sắp xếp lại theo kiểu trên
+Ví dụ, với k = 3 và trình tự ban đầu các số là [1, 2, 3, 1, 2], sau khi sắp xếp lại theo kiểu trên trình tự các số sẽ là [3, 1, 2, 2, 1].
     
-trình tự các số sẽ là [3, 1, 2, 2, 1].
-    
-Cho biết trình tự ban đầu và trình tự hiện tại của dãy số. Hãy xác định có bao nhiêu giá trị k khác nhau có thể đã
-    
-được áp dụng khi xáo dãy số trên và chỉ rõ các giá trị đó.
+Cho biết trình tự ban đầu và trình tự hiện tại của dãy số. Hãy xác định có bao nhiêu giá trị k khác nhau có thể đã được áp dụng khi xáo dãy số trên và chỉ rõ các giá trị đó.
     
 **Input**
     
