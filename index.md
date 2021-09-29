@@ -1,3 +1,5 @@
+## [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
+
 ## Hashing
 
 ### [Bài Toán](https://github.com/ppap-1264589/Hashing/files/6961866/A-Hash.pdf)
@@ -66,4 +68,3 @@ signed main (){
     return 0;
 }
 ```
-### [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
