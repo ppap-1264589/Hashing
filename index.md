@@ -1,10 +1,10 @@
 # [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
 
 ## Các bài toán
-- [A. Tìm xâu](#sectionA)
-- [B. Ghép xâu](#sectionB)
-- [C. Bắt đầu và kết thúc](#sectionC)
-- [D. ADN](#id-sectionD)
+- A. Tìm xâu
+- B. Ghép xâu
+- C. Bắt đầu và kết thúc
+- D. ADN
 * Link download đề bài:
 - [A. Tìm xâu](https://github.com/ppap-1264589/Hashing/files/6961866/A-Hash.pdf)
 - [B. Ghép xâu](https://github.com/ppap-1264589/Hashing/files/7251329/B-Hash.pdf)
@@ -13,8 +13,6 @@
 
 
 ## Chi tiết
-
-<a name="sectionA"/>
 
 ### A. Tìm xâu
 
@@ -119,8 +117,6 @@ signed main (){
     
 ---------------
     
-<a name="sectionB"/>
-
 ### B. Ghép xâu
     
 <details>
@@ -263,7 +259,6 @@ signed main (){
 </details>
 
 -----------------------------------------
-<a name="sectionC"/>
 
 ### C. Bắt đầu và kết thúc
     
