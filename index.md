@@ -33,7 +33,7 @@ Dòng 2 chứa k số nguyên tăng dần xác định k vị trí xuất hiện
 **Example**
 
 *Input*
-```C++
+```c++
 viet
 vietnamnamvietviet
 ```
@@ -47,9 +47,9 @@ vietnamnamvietviet
 
 #### Hướng dẫn
 
-    Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
-    
-    Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
+Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
+
+Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
     
 #### [Code](https://ideone.com/u6oNbQ)
 
@@ -97,26 +97,26 @@ toi
 
 #### Hướng dẫn
 
-    Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A,
+Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A,
     
-    và của tất cả các xâu trong tập hợp cho trước vào tập B
+và của tất cả các xâu trong tập hợp cho trước vào tập B
     
-    Ta lưu lại hai tham số cho mỗi tập
+Ta lưu lại hai tham số cho mỗi tập
     
-    1. Mã Hash
+1. Mã Hash
     
-    2. Thứ tự xâu
+2. Thứ tự xâu
     
-    Sort lại hai tập theo giá trị của mã Hash. 
-    Đối với những mã Hash bằng nhau trong tập B, ta xếp mã Hash nào có 'thứ tự xâu' lớn hơn lên trước.
+Sort lại hai tập theo giá trị của mã Hash. 
+Đối với những mã Hash bằng nhau trong tập B, ta xếp mã Hash nào có 'thứ tự xâu' lớn hơn lên trước.
     
-    Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' lớn hơn luôn được đẩy lên trước
+Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' lớn hơn luôn được đẩy lên trước
     
-    Ghi kết quả : 
+Ghi kết quả : 
     
-    result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
+result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
     
-    for (i từ 1 -> m) cout << result[i] << " ";
+for (i từ 1 -> m) cout << result[i] << " ";
 
 #### [Code](https://ideone.com/od38MB)
 
@@ -173,18 +173,18 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
     
 #### Hướng dẫn
     
-    LƯU Ý: Nháp một chút ra giấy sẽ dễ hiểu hơn
+LƯU Ý: Nháp một chút ra giấy sẽ dễ hiểu hơn
     
-    Ta để ý là việc xáo các xâu như vậy thì tổng số lần xoay sẽ luôn là n - k + 1
-    Sẽ có hai trường hợp xảy ra
+Ta để ý là việc xáo các xâu như vậy thì tổng số lần xoay sẽ luôn là n - k + 1
+Sẽ có hai trường hợp xảy ra
     - TH1: (n - k + 1) % 2 == 0
         Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
     - TH2: (n - k + 1) % 2 == 1
         Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
     
-    Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
+Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
     
-    Đáp án: Với mỗi k từ 1->n xét từng trường hợp tương ứng của (n - k + 1)
-    Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
+Đáp án: Với mỗi k từ 1->n xét từng trường hợp tương ứng của (n - k + 1)
+Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
         
 #### [Code](https://ideone.com/XvOmUc)
