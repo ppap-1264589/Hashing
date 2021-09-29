@@ -48,6 +48,7 @@ vietnamnamvietviet
 #### Hướng dẫn
 
     Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
+    
     Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
     
 #### [Code](https://ideone.com/u6oNbQ)
@@ -75,6 +76,7 @@ Mỗi dòng trong m dòng tiếp theo chứa xâu độ dài k = n / m.
 **Output**
 
 Đưa ra một dòng m số nguyên xác định trình tự lắp ghép các mẩu giấy. Nếu tồn tại nhiều cách lắp
+
 ghép thì đưa ra cách có thứ tự từ điển lớn nhất.
 
 **Example**
@@ -96,18 +98,24 @@ toi
 #### Hướng dẫn
 
     Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A,
+    
     và của tất cả các xâu trong tập hợp cho trước vào tập B
     
     Ta lưu lại hai tham số cho mỗi tập
+    
     1. Mã Hash
+    
     2. Thứ tự xâu
     
     Sort lại hai tập theo giá trị của mã Hash. 
     Đối với những mã Hash bằng nhau trong tập B, ta xếp mã Hash nào có 'thứ tự xâu' lớn hơn lên trước.
+    
     Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' lớn hơn luôn được đẩy lên trước
     
     Ghi kết quả : 
+    
     result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
+    
     for (i từ 1 -> m) cout << result[i] << " ";
 
 #### [Code](https://ideone.com/od38MB)
