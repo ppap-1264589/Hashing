@@ -17,7 +17,7 @@
 ### A. Tìm xâu
 
 <details>
-<summary>Đề bài</summary>
+    <summary>Đề bài</summary>
 
 Cho 2 xâu A, B độ dài không vượt quá 10^6. Đưa ra những vị trí xuất hiện xâu A trong xâu B.
 
@@ -49,14 +49,14 @@ vietnamnamvietviet
 </details>
 
 <details>
-<summary>Hướng dẫn</summary>
+    <summary>Hướng dẫn</summary>
 
     Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
     Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
 </details>
 
 <details>
-<summary>Code</summary>
+    <summary>Code</summary>
     
 ```c++
 #include <bits/stdc++.h>
