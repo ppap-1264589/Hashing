@@ -14,9 +14,12 @@
 
 ## Chi tiết
 
-<a name="sectionA"/>
+<a name="sectionA"/></a>
 
 ### A. Tìm xâu
+
+</a>
+
 <details>
 <summary>Đề bài</summary>
 
@@ -121,6 +124,8 @@ signed main (){
 <a name="sectionB"/>
 
 ### B. Ghép xâu
+</a>
+    
 <details>
 <summary>Đề bài</summary>
 
@@ -264,6 +269,8 @@ signed main (){
 <a name="sectionC"/>
 
 ### C. Bắt đầu và kết thúc
+    
+</a>
     
 <details>
 <summary>Đề bài</summary>
