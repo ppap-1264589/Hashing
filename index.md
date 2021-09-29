@@ -171,14 +171,15 @@ toi
     
     Ta lưu lại hai tham số cho mỗi tập
     1. Mã Hash
-    2. Thứ tự từ điển
+    2. Thứ tự xâu
     
     Sort lại hai tập theo giá trị của mã Hash. 
-    Đối với những mã Hash bằng nhau trong tập B, ta xếp mã Hash nào có thứ tự từ điển lớn hơn lên trước.
-    Việc này đảm bảo cho các xâu giống nhau, thì xâu có thứ tự từ điển lớn hơn luôn được đẩy lên trước
+    Đối với những mã Hash bằng nhau trong tập B, ta xếp mã Hash nào có 'thứ tự xâu' lớn hơn lên trước.
+    Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' lớn hơn luôn được đẩy lên trước
     
-    Ghi kết quả : result[thứ tự từ điển của A[i]] = thứ tự từ điển của B[i]
-    với m xâu
+    Ghi kết quả : 
+    result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
+    for (i từ 1 -> m) cout << result[i] << " ";
 </details>
 
 <details>
@@ -321,3 +322,107 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
 1
 3
 ```
+</details>
+    
+<details>
+<summary>Hướng dẫn</summary>
+    
+    LƯU Ý: Nháp một chút ra giấy sẽ dễ hiểu hơn
+    
+    Ta để ý là việc xáo các xâu như vậy thì tổng số lần xoay sẽ luôn là n - k + 1
+    Sẽ có hai trường hợp xảy ra
+    - TH1: (n - k + 1) % 2 == 0
+        Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
+    - TH2: (n - k + 1) % 2 == 1
+        Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
+    
+    Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
+    
+    Đáp án: Với mỗi k từ 1->n xét từng trường hợp tương ứng của (n - k + 1)
+    Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
+</details>
+    
+<details>
+    <summary>Code</summary>
+    
+```c++
+#include <bits/stdc++.h>
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+
+#define ll                      long long
+#define up(i,a,b)               for (int i = (a); i <= (b); i++)
+#define down(i,a,b)             for (int i = (a); i >= (b); i--)
+#define MOD                     1000000007
+#define base                    311
+using namespace std;
+
+const int maxn = 1000001;
+const long long MM = 1ll*MOD*MOD;
+int n;
+ll a[maxn];
+ll b[maxn];
+ll hashx[maxn];
+ll hashn[maxn];
+ll D[maxn]; // Decryptor
+long long hashB;
+
+void create(){
+    up(i, 1, n){
+        hashx[i] = (hashx[i-1]*base + a[i]) % MOD;
+    }
+    down(i, n, 1){
+        hashn[i] = (hashn[i+1]*base + a[i]) % MOD;
+    }
+}
+
+ll getx(int u, int v){
+    return (hashx[v] - hashx[u-1]*D[v-u+1] + MM) % MOD;
+}
+
+ll getn(int u, int v){
+    return (hashn[u] - hashn[v+1]*D[v-u+1] + MM) % MOD;
+}
+
+bool check(int k){
+    long long sum = 0;
+    if ((n - k + 1) % 2 == 0){
+        sum = (hashx[k-1] + getx(k, n)*D[k-1]) % MOD;
+    }
+    else {
+        sum = (getn(1, k-1) + getx(k, n)*D[k-1]) % MOD;
+    }
+    /// Decryptor is generated from 1 to n, so it
+    /// only has effect on (1 -> n) hashed substring
+    return (sum == hashB);
+}
+
+signed main (){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    cin >> n;
+    up(i, 1, n) cin >> a[i];
+    up(i, 1, n) cin >> b[i];
+    D[0] = 1;
+    up(i, 1, n) D[i] = (D[i-1]*base) % MOD;
+    up(i, 1, n){
+        hashB = (hashB*base + b[i]) % MOD;
+    }
+    create();
+
+    vector<int> res;
+    for (int i = 1; i <= n; i++){
+        if (check(i)) res.push_back(i);
+    }
+
+    cout << res.size() << "\n";
+    for (auto x : res){
+        cout << x << " ";
+    }
+    return 0;
+}
+```
+</details>
