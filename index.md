@@ -170,17 +170,19 @@ LƯU Ý: Nháp một chút ra giấy sẽ dễ hiểu hơn
 Ta để ý là việc xáo các xâu như vậy thì tổng số lần xoay sẽ luôn là n - k + 1
 
 Sẽ có hai trường hợp xảy ra
+
 - TH1: (n - k + 1) % 2 == 0
 
-    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
-    
+Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
+
 - TH2: (n - k + 1) % 2 == 1
 
-    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
+Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
     
 Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
     
 Đáp án: Với mỗi k từ 1->n xét từng trường hợp tương ứng của (n - k + 1)
+
 Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
         
 #### [Code](https://ideone.com/XvOmUc)
