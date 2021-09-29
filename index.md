@@ -53,6 +53,7 @@ vietnamnamvietviet
 
     Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
     Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
+    
 </details>
 
 <details>
@@ -110,6 +111,7 @@ signed main (){
     return 0;
 }
 ```
+                         
 </details>
 
     
@@ -156,6 +158,7 @@ toi
 ```c++
 3 1 2
 ```
+    
 </details>
 
 <details>
@@ -175,6 +178,7 @@ toi
     Ghi kết quả : 
     result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]
     for (i từ 1 -> m) cout << result[i] << " ";
+    
 </details>
 
 <details>
@@ -254,6 +258,7 @@ signed main (){
     up(i, 1, m) cout << res[i] << " ";
 }
 ```
+    
 </details>
 
 -----------------------------------------
@@ -309,6 +314,7 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
 1
 3
 ```
+    
 </details>
     
 <details>
@@ -327,6 +333,7 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
     
     Đáp án: Với mỗi k từ 1->n xét từng trường hợp tương ứng của (n - k + 1)
     Nếu mã Hash của xâu tìm được bằng mã Hash của xâu ban đầu, thì k là một đáp án khả thi
+    
 </details>
     
 <details>
@@ -412,6 +419,5 @@ signed main (){
     return 0;
 }
 ```
+                     
 </details>
-
-    
