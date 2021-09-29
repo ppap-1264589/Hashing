@@ -47,7 +47,7 @@ vietnamnamvietviet
 
 #### Hướng dẫn
 
-Hoàn toàn có thể làm trâu bài toàn này với độ phức tạp O(n*m) cùng hàm find() trong thư viện cstring
+Hoàn toàn có thể làm trâu bài toán này với độ phức tạp O(n*m) cùng hàm find() trong thư viện <cstring>
 
 Tuy nhiên với thuật toán Hash String thì chỉ cần khởi tạo mã Hash trong O(m+n) và kiểm tra trong O(1)
     
