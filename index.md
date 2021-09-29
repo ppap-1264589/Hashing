@@ -1,9 +1,9 @@
 # [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
 
 ## Các bài toán
-- [A. Tìm xâu](#id-sectionA)
-- [B. Ghép xâu](#id-sectionB)
-- [C. Bắt đầu và kết thúc](#id-sectionC)
+- [A. Tìm xâu](#sectionA)
+- [B. Ghép xâu](#sectionB)
+- [C. Bắt đầu và kết thúc](#sectionC)
 - [D. ADN](#id-sectionD)
 * Link download đề bài:
 - [A. Tìm xâu](https://github.com/ppap-1264589/Hashing/files/6961866/A-Hash.pdf)
@@ -14,7 +14,7 @@
 
 ## Chi tiết
 
-<div id='id-sectionA'/>
+<a name="sectionA"/>
 
 ### A. Tìm xâu
 <details>
@@ -116,10 +116,9 @@ signed main (){
     
     
     
-    
 ---------------
-
-<div id='id-sectionB'/>
+    
+<a name="sectionB"/>
 
 ### B. Ghép xâu
 <details>
@@ -262,7 +261,7 @@ signed main (){
 </details>
 
 -----------------------------------------
-<div id='id-sectionC'/>
+<a name="sectionC"/>
 
 ### C. Bắt đầu và kết thúc
     
