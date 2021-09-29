@@ -99,10 +99,8 @@ toi
 
 Thực hiện việc lấy mã Hash của các đoạn k ký tự liên tiếp trong xâu ban đầu vào tập A, và của tất cả các xâu trong tập hợp cho trước vào tập B
     
-Ta lưu lại hai tham số cho mỗi tập
-    
+Ta lưu lại hai tham số cho mỗi tập:
 1. Mã Hash
-    
 2. Thứ tự xâu
     
 Sort lại hai tập theo giá trị của mã Hash. 
@@ -112,7 +110,7 @@ Việc này đảm bảo cho các xâu giống nhau, thì xâu có 'thứ tự' 
     
 Ghi kết quả : 
 ```c++    
-result[thứ tự của xâu A[i]] = thứ tự xâu của B[i]    
+result[thu tu cua xau A[i]] = thu tu cua xau B[i]    
 for (i từ 1 -> m) cout << result[i] << " ";
 ```
 
@@ -170,11 +168,15 @@ tại của dãy số, mỗi số có giá trị trong phạm vi [1..10^5].
 LƯU Ý: Nháp một chút ra giấy sẽ dễ hiểu hơn
     
 Ta để ý là việc xáo các xâu như vậy thì tổng số lần xoay sẽ luôn là n - k + 1
+
 Sẽ có hai trường hợp xảy ra
-    - TH1: (n - k + 1) % 2 == 0
-        Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
-    - TH2: (n - k + 1) % 2 == 1
-        Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
+- TH1: (n - k + 1) % 2 == 0
+
+    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên của xâu
+    
+- TH2: (n - k + 1) % 2 == 1
+
+    Khi đó bản chất của xâu sẽ là (n-k+1) ký tự ở cuối hợp lại với (k-1) kí tự đầu tiên (theo thứ tự ngược lại) của xâu
     
 Bài tập đòi hỏi kĩ thuật lấy mã Hash ngược của xâu
     
