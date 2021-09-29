@@ -233,8 +233,8 @@ Nhận thấy xâu cho trước có thể đẩy vòng tròn, nên ta quy xâu c
 Sử dụng kĩ thuật tìm kiếm nhị phân:
 
 - Quy về bài toán tìm result sao cho result là xâu con liên tiếp chung dài nhất của cả hai xâu
-- xét k và xét 1 xâu độ dài (res + 1 << k) có thỏa mãn hay không ?
-- Nếu (res + 1 << k) là một xâu thỏa mãn kết quả : result += (1 << k)
+- xét k và xét 1 xâu độ dài (result + 1 << k) có thỏa mãn hay không ?
+- Nếu (result + 1 << k) là một xâu thỏa mãn kết quả : result += (1 << k)
 - Lần lượt tìm đến k-1, k-2... 0
 
 Nhận xét: do tính chất 'chung' của hai xâu **giảm dần** khi 'độ dài tìm được' **tăng lên**
