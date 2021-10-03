@@ -252,7 +252,7 @@ Nếu ta chỉ dùng 1 MOD, thì chúng ta sẽ không Accepted được bài to
 Tại sao ?
 
 Trước tiên chúng ta cần phải quay về bài toán ngày sinh nhật: 
->! Trong một phòng có 75 người, xác suất để hai người có cùng ngày sinh xấp xỉ 100% (?!)
+> Trong một phòng có 75 người, xác suất để hai người có cùng ngày sinh xấp xỉ 100% (?!)
 
 Phân tích: giả sử tất cả mọi người trong phòng đều có ngày sinh khác nhau đôi một
 
@@ -261,6 +261,7 @@ Nếu người thứ nhất sinh vào một ngày nào đó trong năm, thì ng�
 -> Xác suất để 2 người khác ngày sinh: (1 * (1 - 1/365)) * 100% 
 
 -> Xác suất để 3 người khác ngày sinh: (1 * (1 - 1/365) * (1 - 2/365)) * 100%
+    
 ...
 
 Tương tự: xác suất để 75 người đều khác ngày sinh : ~ 0.1%
