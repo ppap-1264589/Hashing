@@ -266,7 +266,7 @@ Nếu người thứ nhất sinh vào một ngày nào đó trong năm, thì ng�
 
 Tương tự: xác suất để 75 người đều khác ngày sinh : ~ 0.1%
 
-Trở về với bài toán, ta thấy rằng xác suất để có được hai mã Hash khác nhau trong 10^5 số từ 0->10^9, sẽ là một tỉ lệ rất nhỏ (tính toán cho thấy giá trị này đạt khoảng 18%) -> hiệu quả của thuật toán Hash không cao !
+Trở về với bài toán, ta thấy rằng xác suất để có được hai mã Hash khác nhau trong 10^5 số từ 0->10^9, sẽ là một tỉ lệ khá nhỏ (tính toán cho thấy giá trị này đạt khoảng 32.62%) -> hiệu quả của thuật toán Hash không cao !
 
 -> Nên dùng nhiều base hoặc nhiều MOD để giảm xác xuất Collision
 
