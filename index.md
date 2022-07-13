@@ -1,10 +1,6 @@
 # [Trang chủ](https://ppap-1264589.github.io/interesting-solution)
 
 ## Các bài toán
-- A. Tìm xâu
-- B. Ghép xâu
-- C. Bắt đầu và kết thúc
-- D. ADN
 * Link download đề bài:
 - [A. Tìm xâu](https://github.com/ppap-1264589/Hashing/files/6961866/A-Hash.pdf)
 - [B. Ghép xâu](https://github.com/ppap-1264589/Hashing/files/7251329/B-Hash.pdf)
